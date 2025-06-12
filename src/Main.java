@@ -1,23 +1,34 @@
-import java.util.Arrays;
+import queue.ArrayQueue;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
-        Array array = new Array(3);
+//        queue.LinkedListQueue linkedListQueue = new queue.LinkedListQueue();
+//        linkedListQueue.enqueue(2);
+//        linkedListQueue.enqueue(3);
+//        linkedListQueue.enqueue(4);
+//        System.out.println(linkedListQueue);
+//        System.out.println(linkedListQueue.peek());
+//        linkedListQueue.dequeue();
+//        System.out.println(linkedListQueue);
+//        System.out.println(linkedListQueue.peek());
 
-        array.add(1);
-        array.add(2);
-        array.add(10);
-        array.add(20);
-        array.print(); //[1 2 10 20]
-        array.remove(0); //[2 10 20]
-//        System.out.println(array.contains(1));
-//        System.out.println(array.indexOf(2));
-//        System.out.println(array.isEmpty());
-//        array.print();
-//        System.out.println(array.size());
-        System.out.println(Arrays.toString(array.toArray()));
+        ArrayQueue arrayQueue = new ArrayQueue(5);
+        arrayQueue.enqueue(10);
+        arrayQueue.enqueue(20);
+        arrayQueue.enqueue(30);
+        arrayQueue.enqueue(40);
+        arrayQueue.enqueue(50);
+        System.out.println(arrayQueue.peek());
+        System.out.println(arrayQueue);
+        arrayQueue.dequeue();
+        arrayQueue.enqueue(60);
+
+        System.out.println(arrayQueue.peek());
+        System.out.println(arrayQueue);
+
+        System.out.println("debug");
     }
 }
